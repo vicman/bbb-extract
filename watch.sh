@@ -1,6 +1,6 @@
 #!/bin/bash -eu
 
-#Si aparece este error  /bin/bash^M: intérprete erróneo: No existe el archivo o el directorio, ejecutar dos2unix nombrescript.sh
+#Si aparece este error  /bin/bash^M: intÃ©rprete errÃ³neo: No existe el archivo o el directorio, ejecutar dos2unix nombrescript.sh
 
 echo "Holillas"
 
@@ -14,7 +14,7 @@ watch() {
   inotifywait -r -m -e create -e moved_to $DIRECTORY_TO_OBSERVE  | while read path action file;do
      if [[ "$file" = "events.xml" ]]; then  
       echo "Change detected date $(date) in ${path} action ${action} in file ${file}" \
-      build ${path}    
+      build "${path}"    
   	fi
   done
 
